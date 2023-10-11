@@ -44,7 +44,7 @@ public class WarGame {
             if (turns >= 300) {
                 shouldContinue = false;
             } else if (playerHasCards(player1, secondDeck1) && playerHasCards(player2, secondDeck2)) {
-                videoGames();
+                turn();
                 turns++;
                 try {
                     Thread.sleep(0);
@@ -70,7 +70,7 @@ public class WarGame {
         System.out.println("Game End");
     }
 
-    public void videoGames() {
+    public void turn() {
         transferDecks(player1, secondDeck1);
         transferDecks(player2, secondDeck2);
         Card p1Deal = player1.deck.deal();
